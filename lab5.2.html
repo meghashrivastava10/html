@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 5 Part 2</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">  
+    const productInfo = {
+        prod_img: 'care-products.jpg',
+        prod_name: 'Bath and Body Products',
+        prod_description: 'From shower gel and bar soap to moisturizing lotions and creams, the bath and body category includes all the items you need to take care of your skin and external body surfaces.'
+    };
+
+    // All your code should be between these two comments
+   
+    //Stateless Functional Components
+    const ProductImageJSX = (props) => {
+        return < img src= {props.ProductImage1} />;
+    };
+
+    const ProductNameJSX = (props) => {
+        return <h2> {props.ProductName1} </h2> ;
+    };
+
+    const ProductDescJSX = (props) => 
+    {return <p>{props.ProductDescription1}</p>;
+};
+
+    const ProductDetailJSX = (props) => {
+        return (
+            <div>
+                <ProductImageJSX ProductImage1 = {productInfo.prod_img} />
+                <ProductNameJSX  ProductName1 = {productInfo.prod_name} />
+                <ProductDescJSX  ProductDescription1 = {productInfo.prod_description} />
+            </div>
+        );};
+
+    //ReactDOM
+     ReactDOM.render(<ProductDetailJSX />, document.getElementById('app'));
+
+
+    // All your code should be between these two comments
+    </script>
+</body>
+</html>
